@@ -1,10 +1,15 @@
 #work {
-    padding: 100px 0;
+    padding: 140px 0;
+}
+
+#work h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
 .section-description {
     max-width: 600px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     color: #666;
 }
 
@@ -13,9 +18,14 @@
     grid-template-columns: 55% 45%;
     gap: 48px;
     align-items: center;
-    margin-bottom: 120px;
+    margin-bottom: 140px;
 }
 
+.project:last-child {
+    margin-bottom: 0;
+}
+
+/* Reverses the second project */
 .project.reverse {
     grid-template-columns: 45% 55%;
 }
@@ -32,12 +42,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     width: 100%;
     aspect-ratio: 16 / 10;
-    box-sizing: border-box;
+
     overflow: hidden;
     border-radius: 20px;
     background: #efefef;
+
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
@@ -120,9 +132,11 @@
     display: inline-block;
     width: fit-content;
     margin-top: 10px;
+
     color: #111;
     font-weight: 600;
     text-decoration: none;
+
     transition: opacity 0.2s ease;
 }
 
@@ -131,11 +145,23 @@
 }
 
 @media (max-width: 900px) {
+    #work {
+        padding: 100px 0;
+    }
+
+    #work h2 {
+        font-size: 40px;
+    }
+
     .project,
     .project.reverse {
         grid-template-columns: 1fr;
         gap: 32px;
-        margin-bottom: 80px;
+        margin-bottom: 90px;
+    }
+
+    .project:last-child {
+        margin-bottom: 0;
     }
 
     .project.reverse .project-image,
