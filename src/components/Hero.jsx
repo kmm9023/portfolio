@@ -1,5 +1,5 @@
 import "../styles/hero.css";
-import headshot from "../assets/profile/headshot.jpg";
+import headshot from "../assets/profile/headshot.JPG";
 
 function Hero() {
   const resumeUrl =
