@@ -1,0 +1,13 @@
+import "../styles/navbar.css";
+
+function Navbar() {
+  return (
+    <nav className="navbar">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  );
+}
+
+export default Navbar;

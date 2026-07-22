@@ -1,0 +1,153 @@
+#work {
+    padding: 100px 0;
+}
+
+.section-description {
+    max-width: 600px;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+.project.reverse {
+    grid-template-columns: 45% 55%;
+}
+
+.project.reverse .project-image {
+    order: 2;
+}
+
+.project.reverse .project-content {
+    order: 1;
+}
+
+.project-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #efefef;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-image img {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Seoul logo card */
+
+.project-image.seoul-project-image {
+    padding: 40px;
+}
+
+.project-image.seoul-project-image img {
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+/* Peaceful Place screenshot card */
+
+.project-image.peaceful-project-image {
+    padding: 0;
+}
+
+.project-image.peaceful-project-image img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+}
+
+.project:hover .project-image {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+.project:hover .project-image img {
+    transform: scale(1.03);
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.project-number {
+    color: #888;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+
+.project-content h3 {
+    margin: 0;
+    font-size: 44px;
+    line-height: 1.1;
+}
+
+.project-type {
+    margin: 0;
+    color: #666;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.project-content p {
+    margin: 0;
+}
+
+.project-content a {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 10px;
+    color: #111;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.project-content a:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 900px) {
+    .project,
+    .project.reverse {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-bottom: 80px;
+    }
+
+    .project.reverse .project-image,
+    .project.reverse .project-content {
+        order: initial;
+    }
+
+    .project-content h3 {
+        font-size: 36px;
+    }
+
+    .project-image.seoul-project-image {
+        padding: 24px;
+    }
+}
