@@ -58,7 +58,7 @@ function FeaturedWork() {
             sounds, and personalization.
           </p>
 
-          <Link to="/peaceful-place">View Case Study →</Link>
+          <Link to="/peaceful-place">View Project →</Link>
         </div>
       </div>
     </section>
